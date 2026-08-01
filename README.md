@@ -12,7 +12,7 @@
 
 ## Repository Purpose
 
-This repository contains **one integrated lecture in English** that connects the major technical areas required to design modern intelligent automation systems:
+This repository contains **one integrated lecture** that connects the major technical areas required to design modern intelligent automation systems:
 
 - Control problems and dynamic systems.
 - Embedded systems and heterogeneous computing.
