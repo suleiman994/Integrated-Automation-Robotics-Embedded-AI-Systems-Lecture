@@ -1,0 +1,10 @@
+domain,top_level_metrics,numeric_top_level_metrics,status
+control_systems,8,4,completed
+embedded_systems,6,4,completed
+robotics,5,4,completed
+perception_and_fusion,5,4,completed
+autonomous_vehicles,5,4,completed
+industrial_automation,6,5,completed
+machine_learning,5,2,completed
+deep_learning,5,4,completed
+computational_methods,9,4,completed

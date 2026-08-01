@@ -1,0 +1,204 @@
+{
+  "control_systems": {
+    "controllable": true,
+    "observable": true,
+    "lqr_gain": [
+      [
+        5.711508865041954,
+        3.832120963855061
+      ]
+    ],
+    "riccati_trace": 310.28320947658136,
+    "final_open_loop_position": 1.6000000000000012,
+    "identified_parameters": [
+      0.8193533319232228,
+      0.34989544734062
+    ],
+    "identification_rmse": 0.014999116225975077,
+    "final_pid_output": 0.16578947368421043
+  },
+  "embedded_systems": {
+    "total_utilization": 0.36,
+    "all_tasks_schedulable": true,
+    "response_times": [
+      {
+        "task": "current_control",
+        "response_time": 0.15,
+        "deadline": 1.0,
+        "schedulable": true
+      },
+      {
+        "task": "state_estimator",
+        "response_time": 0.6,
+        "deadline": 5.0,
+        "schedulable": true
+      },
+      {
+        "task": "planner",
+        "response_time": 2.9,
+        "deadline": 20.0,
+        "schedulable": true
+      },
+      {
+        "task": "logger",
+        "response_time": 4.2,
+        "deadline": 50.0,
+        "schedulable": true
+      }
+    ],
+    "pipeline_partition": {
+      "allocation": [
+        {
+          "stage": "camera_preprocessing",
+          "resource": "FPGA",
+          "cost": 18.0
+        },
+        {
+          "stage": "cnn_inference",
+          "resource": "GPU",
+          "cost": 22.0
+        },
+        {
+          "stage": "state_estimation",
+          "resource": "CPU",
+          "cost": 20.0
+        },
+        {
+          "stage": "planning",
+          "resource": "CPU",
+          "cost": 28.0
+        }
+      ],
+      "remaining_capacity": {
+        "CPU": 12.0,
+        "FPGA": 52.0,
+        "GPU": 38.0
+      }
+    },
+    "dma_1mb_ms": 2.52,
+    "amdahl_speedup_8cores": 5.1282051282051295
+  },
+  "robotics": {
+    "ik_solution_rad": [
+      -0.051805120594534904,
+      1.4533389346619565
+    ],
+    "fk_reconstruction_error": 1.1102230246251565e-16,
+    "peak_joint_speed": 0.8720033607971739,
+    "path_length_cells": 37,
+    "path_found": true
+  },
+  "perception_and_fusion": {
+    "foreground_iou": 0.7924528301886793,
+    "stereo_depths_m": [
+      19.25,
+      9.625,
+      4.8125
+    ],
+    "fused_position": 9.991379310344827,
+    "fused_position_variance": 0.20689655172413793,
+    "radar_range_resolution_m": 0.09993081933333334
+  },
+  "autonomous_vehicles": {
+    "sae_levels": 6,
+    "stopping_distance_m": 32.14285714285714,
+    "ttc_s": 2.8,
+    "emergency_braking_required": true,
+    "motion_statistics": {
+      "mean_speed": 1.8046774283756224,
+      "maximum_speed": 1.8084853724016177,
+      "mean_acceleration": 0.036679402072169166,
+      "maximum_acceleration": 0.061243206536831345,
+      "trajectory_extent": [
+        21.6,
+        0.9357834684961954
+      ]
+    }
+  },
+  "industrial_automation": {
+    "scaled_pressure_bar": 5.0,
+    "redundant_dcs_availability": 0.99999975,
+    "oee": 0.8425689999999999,
+    "produced_count": 1,
+    "event_count": 3,
+    "iiot_payload": {
+      "asset_id": "robot-cell-01",
+      "timestamp": "2026-08-01T13:21:28.233806+00:00",
+      "quality": "GOOD",
+      "measurements": {
+        "cycle_time_s": 8.2,
+        "motor_current_a": 5.4,
+        "temperature_c": 48.5
+      }
+    }
+  },
+  "machine_learning": {
+    "regression_rmse": 0.07774295342450953,
+    "regression_weights": [
+      2.0041039583238214,
+      -0.7928164505734777,
+      0.0006846285372087284,
+      1.2018972297336674
+    ],
+    "pca_explained_variance": [
+      0.2993083297522547,
+      0.27949229116870694
+    ],
+    "naive_bayes_accuracy": 0.9633333333333334,
+    "q_policy_shape": [
+      5,
+      6
+    ]
+  },
+  "deep_learning": {
+    "conv_parameter_count": 18496,
+    "lstm_parameter_count": 54272,
+    "quantization_rmse": 0.0022318851955298764,
+    "actual_pruning_sparsity": 0.65,
+    "compression_report": {
+      "original_bytes": 4800000,
+      "compressed_bytes": 540000,
+      "compression_ratio": 8.88888888888889,
+      "effective_parameters": 540000
+    }
+  },
+  "computational_methods": {
+    "cube_root_two": 1.2599210498738103,
+    "sin_derivative_at_0_5": 0.8775825618728693,
+    "integral_sin_0_pi": 2.000000000676472,
+    "optimized_point": [
+      1.9999999995234816,
+      -0.9999999999999999
+    ],
+    "optimized_objective": 2.2706976677344915e-19,
+    "knapsack": {
+      "selected": [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "value": 36.0,
+      "weight": 12
+    },
+    "mcda_scores": [
+      0.6175084175084173,
+      0.5560690235690235,
+      0.55,
+      0.45
+    ],
+    "mcda_ranking": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "pareto_nondominated": [
+      true,
+      true,
+      true,
+      true
+    ]
+  }
+}

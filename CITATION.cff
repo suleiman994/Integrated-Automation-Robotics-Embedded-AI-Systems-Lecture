@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this educational repository, please cite it."
+title: "Integrated Automation, Robotics, Embedded AI, and Computational Methods: One Comprehensive Lecture"
+type: software
+authors:
+  - family-names: Diabat
+    given-names: Suleiman
+year: 2026
+license: MIT
